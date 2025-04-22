@@ -1,23 +1,38 @@
-print("Bem-vindo ao SOPA!")
+print("BEM-VINDO AO SOPA!")
+print() 
+print()
+aluno = input("Você é aluno do CTBJ? (SIM ou NÃO) ").upper()
+if aluno == ("SIM"):
+    print()
+    print("---------------------")
+    print("Olá, este é o SOPA! Um sistema de orientação pessoal aprimorada que irá lhe auxiliar a avançar nos seus estudos.")
+    print("---------------------")
+    print()
+    print("DADOS PESSOAIS")
+    nome_aluno_ctbj = input("Nome: ")
+    aluno_ctbj = int(input("idade: "))
+    aluno_ctbj = float(input("Telefone de contato: "))
+    aluno_ctbj = input("E-mail: ")
+    aluno_ctbj = input("Confirme e-mail: ")
+    print("---------------------")
+    print()
+    print("Olá, " + nome_aluno_ctbj + "! Vamos prosseguir.")
+    aluno_ctbj = input("Você é discente do médio ou técnico? ")
 
-aluno = input("Você é aluno do CTBJ? (Sim ou Não) ")
-if aluno == ("Sim"):
-    print("Olá, este é o SOPA!")
-    aluno_ctbj = input("Qual o seu nome? ")
-    aluno_ctbj = int(input("Qual a sua idade? "))
-    aluno_ctbj = input("Você é do concomitante ou subsequente? ")
-    aluno_ctbj = input("Você tem dificuldade na matéria do ensino médio ou técnico? ")
-    if aluno_ctbj == ("médio"):
-        aluno_ctbj = input("Qual matéria do ensino médio tem dificuldade? (matemática/português/física/química) ")
-        if aluno_ctbj == ("matemática"):
-            print("É soma? ")
-        elif aluno_ctbj == ("português"):
-            print("É acento? ")
-        elif aluno_ctbj == ("física"):
-            print("É leis gravitacionais? ")
-        elif aluno_ctbj == ("química"):
-            print("É moléculas? ")
-    elif aluno_ctbj == ("técnico"):
+    if aluno_ctbj == ("médio"): #SE FOR DO ENSINO MÉDIO
+        dificuldade_aluno_ctbj = input("Qual matéria do ensino médio tem dificuldade? (matemática/português/física/química) ")
+        if dificuldade_aluno_ctbj == ("matemática"):
+            dificuldade_aluno_ctbj = input("Qual assunto de matemática você está sem entender? ")
+        elif dificuldade_aluno_ctbj == ("português"):
+           dificuldade_aluno_ctbj = input("Qual assunto de português você está sem entender? ")
+        elif dificuldade_aluno_ctbj == ("física"):
+             dificuldade_aluno_ctbj = input("Qual assunto de física você está sem entender? ")
+        elif dificuldade_aluno_ctbj == ("química"):
+             dificuldade_aluno_ctbj = input("Qual assunto de química você está sem entender? ")
+
+    elif aluno_ctbj == ("técnico"): #SE FOR NO ENSINO TÉCNICO
         aluno_ctbj = input("Qual matéria do ensino técnico tem dificuldade? ")
-else:
-  print("Desculpe-me, mas esse sistema só faz parte dos matriculados do CTBJ")
+
+
+else: #SE NÃO FOR ALUNO DO CTBJ
+  print("Desculpe-me, mas esse sistema só faz parte dos matriculados ao CTBJ.")
