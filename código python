@@ -1,0 +1,23 @@
+print("Bem-vindo ao SOPA!")
+
+aluno = input("Você é aluno do CTBJ? (Sim ou Não) ")
+if aluno == ("Sim"):
+    print("Olá, este é o SOPA!")
+    aluno_ctbj = input("Qual o seu nome? ")
+    aluno_ctbj = int(input("Qual a sua idade? "))
+    aluno_ctbj = input("Você é do concomitante ou subsequente? ")
+    aluno_ctbj = input("Você tem dificuldade na matéria do ensino médio ou técnico? ")
+    if aluno_ctbj == ("médio"):
+        aluno_ctbj = input("Qual matéria do ensino médio tem dificuldade? (matemática/português/física/química) ")
+        if aluno_ctbj == ("matemática"):
+            print("É soma? ")
+        elif aluno_ctbj == ("português"):
+            print("É acento? ")
+        elif aluno_ctbj == ("física"):
+            print("É leis gravitacionais? ")
+        elif aluno_ctbj == ("química"):
+            print("É moléculas? ")
+    elif aluno_ctbj == ("técnico"):
+        aluno_ctbj = input("Qual matéria do ensino técnico tem dificuldade? ")
+else:
+  print("Desculpe-me, mas esse sistema só faz parte dos matriculados do CTBJ")
