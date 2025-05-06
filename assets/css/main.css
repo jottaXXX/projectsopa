@@ -526,74 +526,66 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding-bottom: 50px;
-  position: relative;
+  background-color: #122e53;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
 }
 
-.footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  padding: 50px 0;
-}
-
-.footer .footer-newsletter h4 {
-  font-size: 24px;
-}
-
-.footer .footer-newsletter .newsletter-form {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding: 6px 8px;
-  position: relative;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+.footer-content {
   display: flex;
-  transition: 0.3s;
-  border-radius: 4px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
+.footer-logo h3 {
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
-  border: 0;
-  padding: 4px;
-  width: 100%;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  color: var(--default-color);
+.footer-links,
+.footer-contact {
+  margin-top: 20px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-  outline: none;
+.footer-links h4,
+.footer-contact h4 {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
-  border: 0;
-  font-size: 16px;
-  padding: 0 20px;
-  margin: -7px -8px -7px 0;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
+.footer-links ul {
+  list-style: none;
+  padding: 0;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+.footer-links ul li {
+  margin-bottom: 8px;
 }
 
-.footer .footer-top {
-  padding-top: 50px;
+.footer-links ul a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.social-links{
+  display: flex;
+ 
 }
 
 .footer .social-links a {
@@ -616,74 +608,27 @@ h6 {
   background-color: var(--accent-color);
 }
 
-.footer h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 12px;
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #777;
 }
 
-.footer .footer-links {
-  margin-bottom: 30px;
-}
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.footer .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer .footer-links ul i {
-  margin-right: 3px;
-  font-size: 12px;
-  line-height: 0;
-  color: var(--accent-color);
-}
-
-.footer .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-.footer .footer-links ul a {
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  line-height: 1;
-}
-
-.footer .footer-links ul a:hover {
-  color: var(--accent-color);
-}
-
-.footer .footer-about a {
-  color: var(--heading-color);
-  font-size: 24px;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.footer .footer-contact p {
-  margin-bottom: 5px;
-}
-
-.footer .copyright {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.footer .copyright p {
-  margin-bottom: 0;
-}
-
-.footer .credits {
-  margin-top: 6px;
-  font-size: 13px;
+  .footer-links,
+  .footer-contact,
+  .footer-logo {
+    margin-bottom: 20px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -942,7 +887,7 @@ section,
 --------------------------------------------------------------*/
 .about .content {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  padding: 60px;
+  padding: 40px;
 }
 
 .about .content h3 {
@@ -959,7 +904,7 @@ section,
 
 .about .content p {
   margin: 15px 0 30px 0;
-  line-height: 25px;
+  line-height: 24px;
 }
 
 .about .content .btn-read-more {
@@ -1783,7 +1728,7 @@ section,
 }
 
 .team .team-member .member-info {
-  padding: 10px 15px 20px 2px;
+  padding: 10px 15px 20px 15px;
 }
 
 .team .team-member .member-info h4 {
@@ -1928,29 +1873,6 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
-}
-
-.contact .info-item i {
-  font-size: 38px;
-  line-height: 0;
-  color: var(--accent-color);
-}
-
-.contact .info-item h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 20px 0 10px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
 
 .contact .php-email-form {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
@@ -2831,4 +2753,47 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
 }
